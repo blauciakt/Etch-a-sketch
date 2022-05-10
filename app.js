@@ -6,6 +6,9 @@ function generateGrid(size) {
 
     for (let i = 0; i<256; i++) {
         let square = document.createElement('div');
+        square.addEventListener("mouseover", function() {
+            this.style.backgroundColor = "green";
+        } )
         square.style.backgroundColor = 'blue';
         grid.insertAdjacentElement('beforeend', square);
 }
@@ -14,6 +17,9 @@ function generateGrid(size) {
 
 generateGrid(16);
 
+
+
 function changeSize(input) {
     generateGrid(input);
 };
+
